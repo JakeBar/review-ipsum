@@ -1,6 +1,7 @@
 from setuptools import setup
 
-# Packaging based off of https://python-packaging.readthedocs.io/en/latest/index.html
+# Packaging based off of
+# https://python-packaging.readthedocs.io/en/latest/index.html
 
 setup(
       name='review_ipsum',
