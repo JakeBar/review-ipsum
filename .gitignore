@@ -9,3 +9,8 @@
 
 # VS Code stuff
 .vscode
+
+# Virtualenv
+/review_env/
+
+/build/

@@ -1,16 +1,22 @@
-from setuptools import setup
+import setuptools
 
-# Packaging based off of
-# https://python-packaging.readthedocs.io/en/latest/index.html
 
-setup(
-      name='review_ipsum',
-      version='0.1',
-      description='wip review ipsum generator',
-      url='http://github.com/jakebar/review_ipsum',
-      author='Jake Barber',
-      author_email='jake.b.dev@gmail.com',
-      license='MIT',
-      packages=['review_ipsum'],
-      zip_safe=False,
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="review_ipsum",
+    version="0.0.1",
+    author="Jake Barber",
+    author_email="jake.b.dev@gmail.com",
+    description="Review Themed Lorem Ipsum",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/JakeBar/review-ipsum",
+    packages=setuptools.find_packages(),
+    classifiers=(
+        "Programming Language :: Python",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ),
 )

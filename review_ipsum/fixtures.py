@@ -14,7 +14,7 @@ SENTENCES = (
     'I like the colours.',
     'Not as large as I expected.',
     'The top is a lot brighter than in the pictures',
-    'I didn\'nt even know movies could look this good!',
+    'I didn\'t even know movies could look this good!',
     'Works a treat.',
     'No service quality issues.',
     'Great deal.',
