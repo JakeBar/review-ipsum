@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="review_ipsum",
-    version="0.0.1",
+    version="0.0.2",
     author="Jake Barber",
     author_email="jake.b.dev@gmail.com",
     description="Review Themed Lorem Ipsum",
