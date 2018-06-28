@@ -13,16 +13,4 @@ def create_review(number_of_sentences):
         A paragraph of formatted sentences.
     """
 
-    total_sentences = len(SENTENCES)
-    review = ''
-
-    for _ in range(number_of_sentences):
-        review += '{}'.format(
-            SENTENCES[
-                random.randint(0, total_sentences - 1)
-            ]
-        )
-        if _ != number_of_sentences:
-            review += ' '
-
-    return review
+    return ' '.join(random.sample(SENTENCES, number_of_sentences))
