@@ -1,6 +1,5 @@
 import setuptools
 
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
@@ -15,8 +14,10 @@ setuptools.setup(
     url="https://github.com/JakeBar/review-ipsum",
     packages=setuptools.find_packages(),
     classifiers=(
-        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Topic :: Utilities",
     ),
 )
