@@ -1,0 +1,43 @@
+language: python
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.cache/pre-commit
+
+branches:
+  only:
+    - master
+
+stages:
+  - precache
+  - lint
+
+jobs:
+  include:
+    - stage: precache
+      python: 3.6  # required for black
+      install: pip install pre-commit
+      script: pre-commit install --install-hooks
+
+    # each following lint stage builds off this &one
+    - &lint
+      stage: lint
+      install: pip install pre-commit
+      python: 3.6
+      env: STEP=isort  # show travis job label
+      script: pre-commit run --show-diff-on-failure --source origin/master --origin HEAD isort
+
+    - <<: *lint
+      env: STEP=flake8
+      python: 2.7
+      script: pre-commit run --source origin/master --origin HEAD flake8
+
+    - <<: *lint
+      env: STEP=other
+      script: SKIP=flake8,isort,black pre-commit run --source origin/master --origin HEAD
+
+    - <<: *lint
+      python: 3.6
+      env: STEP=black
+      script: pre-commit run --show-diff-on-failure --source origin/master --origin HEAD black
