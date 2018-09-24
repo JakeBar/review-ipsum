@@ -1,4 +1,5 @@
 import random
+
 from .fixtures import SENTENCES
 
 
@@ -13,4 +14,4 @@ def create_review(number_of_sentences):
         A paragraph of formatted sentences.
     """
 
-    return ' '.join(random.choice(SENTENCES) for _ in range(number_of_sentences))
+    return " ".join(random.choice(SENTENCES) for _ in range(number_of_sentences))
